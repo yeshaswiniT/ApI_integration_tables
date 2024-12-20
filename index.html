@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student_assignment</title>
+    <link rel ="stylesheet"   href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body{
+
+    background-color:#002C54;
+}
+
+</style>
+
+
+</head>
+<div class="form">
+
+<body>
+       
+  <div class = "header">
+    <div id = "add" style="display: none;">
+    <p > Data added sucessfully</p> 
+    <i class="fa fa-check-circle" style="font-size:48px;color:red;"></i>
+  </div>
+
+  <div id = "edit" style="display: none;">
+    <p > Data edited sucessfully</p> 
+    <i class="fa fa-check-circle" style="font-size:48px;color:red;"></i>   
+  </div>
+
+  <div id = "delete" style="display: none;">
+    <i class="fa fa-check-circle" style="font-size:48px;color:red;"></i>  
+    <p > Data deleted sucessfully</p> 
+     
+  </div>
+
+  <div id = "Error" style="display: none;">
+    <i class="fa fa-spinner fa-pulse fa-3x fa-fw" style="color:red;"></i>
+    <p > No Record found</p> 
+    <span class="sr-only">Loading...</span>  
+    
+  </div>
+
+   </div>
+
+     
+   <div class="grid">
+         
+        <div class="container">
+          <!-- <div class="form"> -->
+             <!-- <form action="/action_page.php" target="_blank" method="get">  -->
+              <form id="form" >
+                
+          
+              <label for="first_name">First Name</label>
+              <input type="text" name="firstname"  placeholder="Your first name." maxlength="10">
+          
+              <label for="last_name">Last Name</label>
+              <input type="text" name="lastname"  placeholder="Your last name.." maxlength="10">
+          
+
+              <label for="Email">Email</label>
+              <input type ="email" name = "email" placeholder="Email" required > 
+              
+              
+          
+              <label for="phone">phone</label>
+              <input type ="phone" name = phone placeholder="phone number" required > 
+          
+            
+              <button type="submit"  id="submit-btn" class ="mybutton">Add</button>
+             
+            </form>
+
+        </div>
+        
+            
+             
+                
+                  
+                <form class="search"  style="max-width:300px">
+                 <input id = "searchid" type = "text" placeholder="Search Details"  >
+                    <button id ="search-button" type="search">
+                        <i class="fa fa-search"></i>  
+                        <!-- <img class="search-pic" src="Asserts/serachimage.png"/> -->
+                    </button> 
+                </form>
+              </div>
+
+              
+                  
+              
+                  <div class="table">
+                  <!-- <div class="table-contain"> -->
+                    <table>
+                     <thead>
+                        <tr>
+                          <th>
+                            ID
+                            </th>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th>Email</th>
+                          <th>Phone #</th> 
+                        </tr>
+                      </thead>
+                      <tbody id="tableRows">
+                       
+                      </tbody>
+                      </table>
+                    <!-- </div> -->
+          </div> 
+        </div> 
+   
+    
+    
+
+  
+
+
+
+    <script src="rest-api.js"></script>  
+
+    
+</body>
+</html>
