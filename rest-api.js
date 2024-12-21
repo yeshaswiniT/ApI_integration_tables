@@ -28,7 +28,7 @@ try {
         
 } 
 catch (error) {
-  showmessage("#Error")
+  showmessage("#lost");
     console.error("Error creating item:", error);
 }
 
@@ -256,6 +256,8 @@ function hidemessage(){
   header3.style.display='none';
   const header5=  document.querySelector('#Error');
   header5.style.display='none';
+  const header6=  document.querySelector('#lost');
+  header6.style.display='none';
 }
 
 
@@ -265,6 +267,8 @@ function hidemessage(){
 async function editItem(rowId) {
     console.log(rowId);
    
+
+    // Hide or unhide edit/cancel/saveButton/delete icons
     const row = document.getElementById(rowId);
     const cells = row.querySelectorAll('td.data');
     const editButton = row.querySelector('.Edit');
@@ -286,8 +290,7 @@ console.log(cells);
   
     // Extract data from table cells
     
-    cells.forEach((cell, index) => {
-      
+    cells.forEach((cell, index) => { 
        const input = document.createElement('input');
        input.value = cell.textContent;
       cell.innerHTML = '';
@@ -297,26 +300,13 @@ console.log(cells);
         data.id = rowId;
         input.disabled = true;
       } 
-      
+ 
       else {
     //     // Adjust the property names based on your data structure
         data[`column${index}`] = input.value;
         
       }
       
-    })}
-
-
-// document.addEventListener("DOMContentLoaded", () => {
-//       const searchButton = document.getElementById("search-button");
-//       //const searchInput = document.getElementById("search-input");
-  
-  
-// searchButton.addEventListener("click", (event) => {
-
-//     console.log("i am here");
-// fetchItems();
-//   })
-// });
+    })};
     
       
