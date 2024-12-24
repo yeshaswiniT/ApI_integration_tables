@@ -28,7 +28,7 @@ try {
         
 } 
 catch (error) {
-  showmessage("#lost");
+  showmessage("#connection");
     console.error("Error creating item:", error);
 }
 
@@ -119,6 +119,7 @@ rows[i].style.display = 'none';
 
 
 } catch (error) {
+  
     console.error("Error fetching data:", error);
    
     // Handle errors (e.g., revert changes, display error message)
@@ -230,7 +231,7 @@ async function deleteItem(id, rowId) {
       fetchItems(); // Remove the row from the table
       
   } catch (error) {
-    showmessage("#Error")
+    showmessage("#Error");
       console.error("Error deleting item:", error);
   }
 }
@@ -256,7 +257,7 @@ function hidemessage(){
   header3.style.display='none';
   const header5=  document.querySelector('#Error');
   header5.style.display='none';
-  const header6=  document.querySelector('#lost');
+  const header6=  document.querySelector('#connection');
   header6.style.display='none';
 }
 
